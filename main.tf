@@ -102,9 +102,6 @@ resource "ibm_is_instance_group_manager" "instance_group_manager" {
   manager_type         = "autoscale"
   enable_manager       = true
   max_membership_count = 5
-    depends_on = [
-    ibm_is_instance_group.instance_group,
-  ]
 }
 
 resource "ibm_is_instance_group_manager_policy" "cpuPolicy" {
@@ -114,9 +111,6 @@ resource "ibm_is_instance_group_manager_policy" "cpuPolicy" {
   metric_value           = 10
   policy_type            = "target"
   name                   = "${var.basename}-instance-group-manager-policy"
-    depends_on = [
-    ibm_is_instance_group.instance_group,
-  ]
 }
 
 resource "time_sleep" "wait_30_seconds" {
