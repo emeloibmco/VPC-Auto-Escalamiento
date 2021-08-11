@@ -60,6 +60,14 @@ resource "ibm_is_lb" "lb" {
   ]
 }
 
+resource "ibm_is_lb_listener" "lb-listener" {
+  lb                   = ibm_is_lb.lb.id
+  port                 = var.certificate_crn == "" ? "80" : "443"
+  protocol             = var.certificate_crn == "" ? "http" : "https"
+  default_pool         = element(split("/", ibm_is_lb_pool.lb-pool.id), 1)
+  certificate_instance = var.certificate_crn == "" ? "" : var.certificate_crn
+}
+
 resource "ibm_is_lb_pool" "lb-pool" {
   lb                 = ibm_is_lb.lb.id
   name               = "${var.vpc_name}-lb-pool"
@@ -70,15 +78,9 @@ resource "ibm_is_lb_pool" "lb-pool" {
   health_timeout     = "5"
   health_type        = var.enable_end_to_end_encryption ? "https" : "http"
   health_monitor_url = "/"
+  depends_on         = [ibm_is_lb_listener.lb-listener]
 }
 
-resource "ibm_is_lb_listener" "lb-listener" {
-  lb                   = ibm_is_lb.lb.id
-  port                 = var.certificate_crn == "" ? "80" : "443"
-  protocol             = var.certificate_crn == "" ? "http" : "https"
-  default_pool         = element(split("/", ibm_is_lb_pool.lb-pool.id), 1)
-  certificate_instance = var.certificate_crn == "" ? "" : var.certificate_crn
-}
 
 resource "ibm_is_instance_group" "instance_group" {
   name               = "${var.basename}-instance-group"
@@ -108,12 +110,6 @@ resource "ibm_is_instance_group_manager_policy" "cpuPolicy" {
   metric_value           = 10
   policy_type            = "target"
   name                   = "${var.basename}-instance-group-manager-policy"
-}
-
-resource "time_sleep" "wait_30_seconds" {
-  depends_on = [ibm_is_lb.lb]
-
-  destroy_duration = "30s"
 }
 
 output "LOAD_BALANCER_HOSTNAME" {
