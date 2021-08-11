@@ -55,9 +55,6 @@ resource "ibm_is_lb" "lb" {
   name            = "${var.vpc_name}-lb"
   subnets         = ibm_is_subnet.subnet.*.id
   resource_group  = data.ibm_resource_group.group.id
-  depends_on = [
-    ibm_is_instance_group.instance_group,
-  ]
 }
 
 resource "ibm_is_lb_listener" "lb-listener" {
@@ -78,7 +75,6 @@ resource "ibm_is_lb_pool" "lb-pool" {
   health_timeout     = "5"
   health_type        = var.enable_end_to_end_encryption ? "https" : "http"
   health_monitor_url = "/"
-  depends_on         = [ibm_is_lb_listener.lb-listener]
 }
 
 
