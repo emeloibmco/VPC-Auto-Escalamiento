@@ -70,7 +70,6 @@ resource "ibm_is_lb_pool" "lb-pool" {
   health_timeout     = "5"
   health_type        = var.enable_end_to_end_encryption ? "https" : "http"
   health_monitor_url = "/"
-  depends_on = [time_sleep.wait_30_seconds]
 }
 
 resource "ibm_is_lb_listener" "lb-listener" {
