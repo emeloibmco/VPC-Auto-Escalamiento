@@ -106,7 +106,6 @@ resource "ibm_is_instance_group_manager_policy" "cpuPolicy" {
   metric_value           = 10
   policy_type            = "target"
   name                   = "${var.basename}-instance-group-manager-policy"
-  resource_group     = data.ibm_resource_group.group.id
 }
 
 output "LOAD_BALANCER_HOSTNAME" {
