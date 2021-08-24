@@ -20,7 +20,8 @@ Dichos recursos serán aprovisionados por medio de *IBM® Cloud Schematics*, una
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
 2. [Crear y configurar un espacio de trabajo en IBM Cloud Schematics](#Crear-y-configurar-un-espacio-de-trabajo-en-IBM-Cloud-Schematics-bookmark_tabs)
 3. [Configurar las variables de personalización de la plantilla de terraform](#Configurar-las-variables-de-personalización-de-la-plantilla-de-terraform-memo)
-4. [Generar y aplicar el plan de despliegue de los servidores VPC](#Generar-y-apicar-el-plan-de-despliegue-de-los-servidores-VPC-white_check_mark)
+4. [Generar y aplicar el plan de despliegue de los servidores VPC](#Generar-y-aplicar-el-plan-de-despliegue-de-los-servidores-VPC-white_check_mark)
+5. [Referencias](#Referencias-mag)
 6. [Autores](#Autores-black_nib)
 <br />
 
@@ -70,6 +71,7 @@ Asegurese de que el proceso se complete con éxito.
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/generate.gif"></p>
 <br />
+
 * ```Aplicar plan```: Cuando esté listo para realizar cambios en su entorno de nube, puede aplicar sus archivos de configuración de Terraform. Para ejecutar las acciones que se especifican en sus archivos de configuración, Schematics utiliza el complemento *IBM Cloud Provider* para Terraform.
 
 A medida que se aplique el plan, se crearán los distintos recursos, los cuales puede ir observando en la lista de recursos de su cuenta. Puede reconocerlos por el ```basename``` especificado previamente. Asegurese de que el proceso se complete con éxito.
@@ -77,6 +79,11 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/apply.gif"></p>
 <br />
 
-# Referencias 📖
+## Referencias 📖
 
 * [Acerca de IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-about-schematics
+<br />
+
+## Autores :black_nib:
+Equipo IBM Cloud Tech Sales Colombia.
+<br />
