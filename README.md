@@ -45,7 +45,7 @@ Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 * ```Descripción```: Opcionalmente puede dar una descripción del proyecto. 
 
 Una vez completos todos los campos puede presionar la opcion ```Crear / Create```.
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/Imagenes/schematics.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/schematics.gif"></p>
 
 ## Configurar las variables de personalización de la plantilla de terraform :memo:
 Una vez  creado el espacio de trabajo, podra ver el campo ```Variables``` que permite personalizar el espacio de trabajo. Allí ingrese los siguientes campos:
@@ -54,7 +54,7 @@ Una vez  creado el espacio de trabajo, podra ver el campo ```Variables``` que pe
 * ```vpc_name```: Ingrese el nombre que tendra el recurso de VPC en IBM Cloud.
 * ```basename```: Ingrese el prefijo de nombre que tendran los recursos a desplegar dentro de la VPC.
 * ```ssh_keyname```: Nombre del ssh key que tendrán las instancias de computo en el template, la cual aprovisono previamente.
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/Imagenes/variables.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/variables.gif"></p>
 
 
 ## Generar y Aplicar el plan de despliegue de los servidores VPC
