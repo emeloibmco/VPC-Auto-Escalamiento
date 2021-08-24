@@ -28,6 +28,7 @@ resource "ibm_is_public_gateway" "public_gateway" {
   name = "autoscale-pub-gateway"
   vpc  = ibm_is_vpc.vpc.id
   zone = "us-south-1"
+  resource_group           = data.ibm_resource_group.group.id
 
   //User can configure timeouts
   timeouts {
