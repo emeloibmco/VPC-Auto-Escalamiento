@@ -1,4 +1,4 @@
-# VPC Auto Escalamiento :chart_with_downwards_trend::arrow_double_up:
+# VPC Auto Escalamiento ::chart_with_upwards_trend:::arrow_double_up:
 *IBM® Cloud Schematics* 
 
 Con Auto Scale for VPC puede crear un grupo de instancias para escalar según sus necesidades. En función de las métricas de utilización objetivo que defina, el grupo de instancias puede añadir o eliminar instancias de forma dinámica para lograr la disponibilidad de instancias especificada.
@@ -18,7 +18,7 @@ Siguiendo las instrucciones de esta guia se aprovisionaran los siguientes recurs
 
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
-2. [Crear y configurar un espacio de trabajo en IBM Cloud Schematics](#Crear-y-configurar-un-espacio-de-trabajo-en-IBM-Cloud-Schematics)
+2. [Crear y configurar un espacio de trabajo en IBM Cloud Schematics](#Crear-y-configurar-un-espacio-de-trabajo-en-IBM-Cloud-Schematics-bookmark_tabs)
 3. [Configurar las variables de personalización de la plantilla de terraform](#Configurar-las-variables-de-personalización-de-la-plantilla-de-terraform)
 4. [Generar y Aplicar el plan de despliegue de los servidores VPC](#Generar-y-apicar-el-plan-de-despliegue-de-los-servidores-VPC)
 6. [Autores](#Autores-black_nib)
@@ -29,7 +29,7 @@ Siguiendo las instrucciones de esta guia se aprovisionaran los siguientes recurs
 * Contar con un grupo de recursos específico para el despliegue de los recursos
 * Contar con una llave ssh configurada en IBM Cloud - referencia [VPC SSH documentation](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys)
 
-## Crear y configurar un espacio de trabajo en IBM Cloud Schematics
+## Crear y configurar un espacio de trabajo en IBM Cloud Schematics :bookmark_tabs:
 Para realizar el ejercicio lo primero que debe hacer es dirigirse al servicio de <a href="https://cloud.ibm.com/schematics/workspaces">IBM Cloud Schematics</a> y dar click en ```CREAR ESPACIO DE TRABAJO```, una vez hecho esto aparecera una ventana en la que debera diligenciar la siguiente información.
 
 | Variable | Descripción |
