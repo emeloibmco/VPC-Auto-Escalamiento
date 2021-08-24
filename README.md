@@ -19,7 +19,7 @@ Siguiendo las instrucciones de esta guia se aprovisionaran los siguientes recurs
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
 2. [Crear y configurar un espacio de trabajo en IBM Cloud Schematics](#Crear-y-configurar-un-espacio-de-trabajo-en-IBM-Cloud-Schematics-bookmark_tabs)
-3. [Configurar las variables de personalización de la plantilla de terraform](#Configurar-las-variables-de-personalización-de-la-plantilla-de-terraform)
+3. [Configurar las variables de personalización de la plantilla de terraform](#Configurar-las-variables-de-personalización-de-la-plantilla-de-terraform-memo)
 4. [Generar y Aplicar el plan de despliegue de los servidores VPC](#Generar-y-apicar-el-plan-de-despliegue-de-los-servidores-VPC)
 6. [Autores](#Autores-black_nib)
 <br />
@@ -45,15 +45,16 @@ Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 * ```Descripción```: Opcionalmente puede dar una descripción del proyecto. 
 
 Una vez completos todos los campos puede presionar la opcion ```Crear / Create```.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/Imagenes/schematics.gif"></p>
 
-## Configurar las variables de personalización de la plantilla de terraform
-Una vez  creado el espacio de trabajo, podra ver el campo VARIABLES que permite personalizar el espacio de trabajo allí debe ingresar la siguiente información:
+## Configurar las variables de personalización de la plantilla de terraform :memo:
+Una vez  creado el espacio de trabajo, podra ver el campo ```Variables``` que permite personalizar el espacio de trabajo. Allí ingrese los siguientes campos:
 
 * ```resource_group_name```: Ingrese el nombre del grupo de recursos en el cual tiene permisos y donde quedaran agrupados todos los recursos que se aprovisionaran.
 * ```vpc_name```: Ingrese el nombre que tendra el recurso de VPC en IBM Cloud.
 * ```basename```: Ingrese el prefijo de nombre que tendran los recursos a desplegar dentro de la VPC.
-* ```ssh_keyname```: Nombre del ssh key que tendran las instancias de computo en el template
-
+* ```ssh_keyname```: Nombre del ssh key que tendrán las instancias de computo en el template, la cual aprovisono previamente.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/Imagenes/variables.gif"></p>
 
 
 ## Generar y Aplicar el plan de despliegue de los servidores VPC
