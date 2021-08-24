@@ -97,7 +97,6 @@ resource "ibm_is_instance_group_manager" "instance_group_manager" {
   manager_type         = "autoscale"
   enable_manager       = true
   max_membership_count = 5
-  resource_group  = data.ibm_resource_group.group.id
 }
 
 resource "ibm_is_instance_group_manager_policy" "cpuPolicy" {
