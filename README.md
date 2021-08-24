@@ -27,20 +27,24 @@ Siguiendo las instrucciones de esta guia se aprovisionaran los siguientes recurs
 ## Pre Requisitos :pencil:
 * Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud</a>.
 * Contar con un grupo de recursos específico para el despliegue de los recursos
-* Contar con una llave ssh configurada en IBM Cloud - referencia [VPC SSH documentation](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys)
+* Contar con una llave ssh configurada en IBM Cloud - referencia [VPC SSH documentation](https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH#Configurar-claves-SSH-closed_lock_with_key)
 
 ## Crear y configurar un espacio de trabajo en IBM Cloud Schematics :bookmark_tabs:
-Para realizar el ejercicio lo primero que debe hacer es dirigirse al servicio de <a href="https://cloud.ibm.com/schematics/workspaces">IBM Cloud Schematics</a> y dar click en ```CREAR ESPACIO DE TRABAJO```, una vez hecho esto aparecera una ventana en la que debera diligenciar la siguiente información.
+Dirijase al servicio de <a href="https://cloud.ibm.com/schematics/workspaces">IBM Cloud Schematics</a> y de click en ```Crear espacio de trabajo / Create workspace```, una vez hecho esto aparecera una ventana en la que debera diligenciar la siguiente información.
 
 | Variable | Descripción |
 | ------------- | ------------- |
-| URL del repositorio de Gi  | https://github.com/emeloibmco/VPC-Despliegue-VSIs-Schematics |
+| URL del repositorio de GitHub  | https://github.com/emeloibmco/VPC-Auto-Escalamiento |
 | Tocken de acceso  | "(Opcional) Este parametro solo es necesario para trabajar con repositorio privados"  |
 | Version de Terraform | terraform_v0.14 |
 
-Presione ```SIGUIENTE```  > Agregue un nombre para el espacio de trabajo > Seleccione el grupo de recursos al que tiene acceso > Seleccione una ubicacion para el espacio de trabajo y como opcional puede dar una descripción. 
+Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
+* ```Nombre```: Agregue un nombre para el espacio de trabajo.
+* ```Grupo de recursos```: Seleccione el grupo de recursos al que tiene acceso.
+* ```Ubicación```: Seleccione una ubicacion para el espacio de trabajo.
+* ```Descripción```: Opcionalmente puede dar una descripción del proyecto. 
 
-Una vez completos todos los campos puede presionar la opcion ``` CREAR```.
+Una vez completos todos los campos puede presionar la opcion ```Crear / Create```.
 
 ## Configurar las variables de personalización de la plantilla de terraform
 Una vez  creado el espacio de trabajo, podra ver el campo VARIABLES que permite personalizar el espacio de trabajo allí debe ingresar la siguiente información:
