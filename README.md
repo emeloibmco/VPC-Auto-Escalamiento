@@ -1,4 +1,4 @@
-# VPC Auto Escalamiento ::chart_with_upwards_trend:::arrow_double_up:
+# VPC Auto Escalamiento :chart_with_upwards_trend::arrow_double_up:
 *IBM® Cloud Schematics* 
 
 Con Auto Scale for VPC puede crear un grupo de instancias para escalar según sus necesidades. En función de las métricas de utilización objetivo que defina, el grupo de instancias puede añadir o eliminar instancias de forma dinámica para lograr la disponibilidad de instancias especificada.
