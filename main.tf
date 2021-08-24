@@ -93,6 +93,7 @@ resource "ibm_is_instance_group_manager" "instance_group_manager" {
   name                 = "${var.basename}-instance-group-manager"
   aggregation_window   = 90
   instance_group       = ibm_is_instance_group.instance_group.id
+  resource_group  = data.ibm_resource_group.group.id
   cooldown             = 120
   manager_type         = "autoscale"
   enable_manager       = true
