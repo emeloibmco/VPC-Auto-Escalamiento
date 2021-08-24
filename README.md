@@ -1,9 +1,7 @@
 # VPC Auto Escalamiento :chart_with_upwards_trend::arrow_double_up:
-*IBM® Cloud Schematics* 
+Con *Auto Scale for VPC* puede crear un grupo de instancias para escalar según sus necesidades. En función de las métricas de utilización objetivo que defina, el grupo de instancias puede añadir o eliminar instancias de forma dinámica para lograr la disponibilidad de instancias especificada.
 
-Con Auto Scale for VPC puede crear un grupo de instancias para escalar según sus necesidades. En función de las métricas de utilización objetivo que defina, el grupo de instancias puede añadir o eliminar instancias de forma dinámica para lograr la disponibilidad de instancias especificada.
-
-Siguiendo las instrucciones de esta guia se aprovisionaran los siguientes recursos
+Siguiendo las instrucciones de esta guía se aprovisionarán los siguientes recursos:
 
 - VPC
 - Subnets - una en cada zona (zone 1 and zone 2)
@@ -11,6 +9,8 @@ Siguiendo las instrucciones de esta guia se aprovisionaran los siguientes recurs
 - Load balancer (backend pool and frontend listener)
 - Instance group  
 - Instance template
+
+Dichos recursos serán aprovisionados por medio de *IBM® Cloud Schematics*, una vez sean implementados, se realizará una prueba de esfuerzo para observar el autoescalamiento en el grupo de instancias.
 
 <p align="center">
 <img width="500" alt="autoscale" src=images/vpc-autoscale.png>
