@@ -79,7 +79,7 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/apply.gif"></p>
 <br />
 
-## Referencias 📖
+## Referencias :mag:
 
 * [Acerca de IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-about-schematics
 <br />
