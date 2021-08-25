@@ -107,7 +107,7 @@ for ($i=0; $i -le 100; $i++) {
 ## Referencias :mag:
 
 * <a href="https://cloud.ibm.com/docs/schematics?topic=schematics-about-schematics">Acerca de IBM Cloud Schematics</a>
-* Esta es una versión en español del siguiente repositorio. [Link] (https://github.com/IBM-Cloud/vpc-tutorials/tree/master/vpc-autoscale)
+* Esta es una versión en español del siguiente repositorio. [Link](https://github.com/IBM-Cloud/vpc-tutorials/tree/master/vpc-autoscale)
 
 <br />
 
