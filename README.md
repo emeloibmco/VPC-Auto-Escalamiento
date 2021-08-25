@@ -23,8 +23,9 @@ Dichos recursos serán aprovisionados por medio de *IBM® Cloud Schematics*, una
 4. [Generar y aplicar el plan de despliegue de los servidores VPC](#Generar-y-aplicar-el-plan-de-despliegue-de-los-servidores-VPC-white_check_mark)
 5. [Obtener IP pública del load balancer y solicitud HTTP](#Obtener-IP-pública-del-load-balancer-y-solicitud-HTTP-mag)
 6. [Prueba de esfuerzo para generar el autoescalamiento](#Prueba-de-esfuerzo-para-generar-el-autoescalamiento-muscle)
-7. [Referencias](#Referencias-mag)
-8. [Autores](#Autores-black_nib)
+7. [Programar el autoescalamiento](#Programar-el-autoescalamiento-alarm_clock)
+8. [Referencias](#Referencias-mag)
+9. [Autores](#Autores-black_nib)
 <br />
 
 
