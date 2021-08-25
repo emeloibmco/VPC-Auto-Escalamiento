@@ -79,6 +79,18 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/apply.gif"></p>
 <br />
 
+## Obtener IP publica del load balancer y solicitud HTTP
+
+1. Dirijase al servicio de <a href="https://cloud.ibm.com/vpc-ext/network/loadBalancers">Load Balancer</a> y de click en el Load Balancer desplegado.
+2. En ```IPs``` guarde la IP pública.
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/ip.gif"></p>
+<br />
+
+3. 
+
+
+
 ## Referencias :mag:
 
 * [Acerca de IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-about-schematics
