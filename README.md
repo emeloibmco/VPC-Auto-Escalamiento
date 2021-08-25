@@ -21,8 +21,10 @@ Dichos recursos serán aprovisionados por medio de *IBM® Cloud Schematics*, una
 2. [Crear y configurar un espacio de trabajo en IBM Cloud Schematics](#Crear-y-configurar-un-espacio-de-trabajo-en-IBM-Cloud-Schematics-bookmark_tabs)
 3. [Configurar las variables de personalización de la plantilla de terraform](#Configurar-las-variables-de-personalización-de-la-plantilla-de-terraform-memo)
 4. [Generar y aplicar el plan de despliegue de los servidores VPC](#Generar-y-aplicar-el-plan-de-despliegue-de-los-servidores-VPC-white_check_mark)
-5. [Referencias](#Referencias-mag)
-6. [Autores](#Autores-black_nib)
+5. [Obtener IP pública del load balancer y solicitud HTTP](#Obtener-IP-pública-del-load-balancer-y-solicitud-HTTP-mag)
+6. [Prueba de esfuerzo para generar el autoescalamiento](#Prueba-de-esfuerzo-para-generar-el-autoescalamiento-muscle)
+7. [Referencias](#Referencias-mag)
+8. [Autores](#Autores-black_nib)
 <br />
 
 
@@ -79,7 +81,7 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/apply.gif"></p>
 <br />
 
-## Obtener IP publica del load balancer y solicitud HTTP
+## Obtener IP pública del load balancer y solicitud HTTP :mag:
 
 1. Dirijase al servicio de <a href="https://cloud.ibm.com/vpc-ext/network/loadBalancers">Load Balancer</a> y de click en el Load Balancer desplegado.
 2. En ```IPs``` guarde la IP pública.
@@ -87,8 +89,19 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/ip.gif"></p>
 <br />
 
-3. 
+3. Coloque la ```IP pública``` en la barra de navegación y deberá visualizar lo que se muestra en la imagen.
+<br />
 
+## Prueba de esfuerzo para generar el autoescalamiento :muscle:
+
+1. Para realizar una prueba de esfuerzo, se ejecutará el comando ```curl``` 100 veces. Para esto, acceda a *PowerShell* y ejecute el siguiente comando:
+```
+for ($i=0; $i -le 100; $i++) {
+  curl http://<IP Pública>
+ }
+```
+2. Mientras se ejecuta la prueba, dirijase a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a>, elija la instancia que se aprovisonó y de click en la pestaña de ```Memberships```, allí a medida que se ejecuta la prueba deberá observar como se genera el autoescalamiento, añadiendo mas intancias automaticamente.
+<br />
 
 
 ## Referencias :mag:
