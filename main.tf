@@ -36,6 +36,24 @@ resource "ibm_is_public_gateway" "public_gateway" {
   }
 }
 
+resource "ibm_is_security_group" "security_group" {
+  name           = "${var.vpc_name}-lb-sg"
+  vpc            = ibm_is_vpc.vpc.id
+  resource_group = data.ibm_resource_group.group.id
+}
+
+resource "ibm_is_security_group_rule" "security_group_rule_in" {
+  group     = ibm_is_security_group.security_group.id
+  direction = "inbound"
+  remote    = "0.0.0.0/0"
+}
+
+resource "ibm_is_security_group_rule" "security_group_rule_out" {
+  group     = ibm_is_security_group.security_group.id
+  direction = "outbound"
+  remote    = "0.0.0.0/0"
+}
+
 resource "ibm_is_instance_template" "instance_template" {
   name           = "${var.basename}-instance-template"
   image          = data.ibm_is_image.image.id
