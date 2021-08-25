@@ -106,7 +106,7 @@ for ($i=0; $i -le 100; $i++) {
 
 ## Referencias :mag:
 
-* [Acerca de IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-about-schematics
+* <a href="https://cloud.ibm.com/docs/schematics?topic=schematics-about-schematics">Acerca de IBM Cloud Schematics</a>
 <br />
 
 ## Autores :black_nib:
