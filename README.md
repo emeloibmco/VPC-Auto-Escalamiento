@@ -96,19 +96,20 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 
 ## Prueba de esfuerzo para generar el autoescalamiento :muscle:
 
-1. Para realizar una prueba de esfuerzo, se ejecutará el comando ```curl``` 100 veces. Para esto, acceda a *PowerShell* y ejecute el siguiente comando:
+1. Para realizar una prueba de esfuerzo, se ejecutará el comando ```curl``` 2000 veces. Para esto, acceda a *PowerShell* y ejecute el siguiente comando:
 ```
-for ($i=0; $i -le 100; $i++) {
+for ($i=0; $i -le 2000; $i++) {
   curl http://<IP Pública>
  }
 ```
+
 2. Mientras se ejecuta la prueba, dirijase a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a>, elija la instancia que se aprovisonó y de click en la pestaña de ```Memberships```, allí a medida que se ejecuta la prueba deberá observar como se genera el autoescalamiento, añadiendo más intancias automáticamente.
 <br />
 
 ## Programar el autoescalamiento :alarm_clock:
 *IBM Cloud* le permite programar un autoescalamiento de sus recursos, para lograrlo siga estos pasos:
 
-1. Dirijase a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a> y de click en la pestaña ```Scheduled actions```. A continuación ingrese la siguiente información:
+1. Dirijase a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a> y de click en la pestaña ```Scheduled actions```. Active la opción ```Auto scale scheduling``` y a continuación de click en ```Crear / Create ``` e ingrese la siguiente información:
 * ```Nombre```: seleccione un nombre para la acción a programar.
 * ```Frecuencia```: elija si desea ejecutar la acción una vez o de manera recurrente.
 * ```Fecha```: elija la fecha y la hora a la que debe ser ejecutado el autoescalamiento.
