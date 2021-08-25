@@ -106,8 +106,23 @@ for ($i=0; $i -le 100; $i++) {
 <br />
 
 ## Programar el autoescalamiento :alarm_clock:
+*IBM Cloud* le permite programar un autoescalamiento de sus recursos, para lograrlo siga estos pasos:
+
+1. Dirijase a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a> y de click en la pestaña ```Scheduled actions```. A continuación ingrese la siguiente información:
+* ```Nombre```: seleccione un nombre para la acción a programar.
+* ```Frecuencia```: elija si desea ejecutar la acción una vez o de manera recurrente.
+* ```Fecha```: elija la fecha y la hora a la que debe ser ejecutado el autoescalamiento.
+* ```Tamaño del grupo de instancias```: Seleccione un tamaño mínimo o máximo (o ambos) para aplicar cuando se ejecute esta acción.
+
+Una vez haya ingresado todos los datos, de click en ``` Crear / Create ```.
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/programar.gif"></p>
 <br />
+
+2. En la fecha y hora que programo, ingrese a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a> y observe el estado en ```Escalamiento / Scaling ``` y que el número de instancias haya autoescalado, como se observa en la imagen.
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/scaling.PNG"></p>
+<br />
+
 
 ## Referencias :mag:
 
