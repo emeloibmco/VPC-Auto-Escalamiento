@@ -90,6 +90,8 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 <br />
 
 3. Coloque la ```IP pública``` en la barra de navegación y deberá visualizar lo que se muestra en la imagen.
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/servidor.PNG"></p>
 <br />
 
 ## Prueba de esfuerzo para generar el autoescalamiento :muscle:
