@@ -125,6 +125,24 @@ Una vez haya ingresado todos los datos, de click en ``` Crear / Create ```.
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/scaling.PNG"></p>
 <br />
 
+ 3. Transcurrido un tiempo, ingrese a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a> y observe el estado en ```Saludable / Healthy ``` del grupo de instancias, ingrese a su grupo de instancias y dirijase a ```Memberships``` y visualice las dos instancias y su estado.
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/intances.gif"></p>
+<br />
+
+4. Dirijase al servicio de <a href="https://cloud.ibm.com/vpc-ext/network/loadBalancers">Load Balancer</a> y de click en el Load Balancer desplegado. Seleccione la pestaña ```Back-end pool``` y visualice las instancias con la subred donde esta desplegadas y su dirección IP privada.
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/loadbalancer.gif"></p>
+<br />
+
+5. Por último ingrese a <a href="https://cloud.ibm.com/vpc-ext/compute/vs">Virtual Server Instances</a> y visualice las instancias en estado ```Running```, como se onserva en la imagen.
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/vsi.PNG"></p>
+<br />
+
+
+
+
 
 ## Referencias :mag:
 
