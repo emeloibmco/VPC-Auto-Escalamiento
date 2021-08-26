@@ -135,7 +135,7 @@ Una vez haya ingresado todos los datos, de click en ``` Crear / Create ```.
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/loadbalancer.gif"></p>
 <br />
 
-5. Por último ingrese a <a href="https://cloud.ibm.com/vpc-ext/compute/vs">Virtual Server Instances</a> y visualice las instancias en estado ```Running```, como se onserva en la imagen.
+5. Por último ingrese a <a href="https://cloud.ibm.com/vpc-ext/compute/vs">Virtual Server Instances</a> y visualice las instancias en estado ```Running```, como se observa en la imagen.
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/vsi.PNG"></p>
 <br />
