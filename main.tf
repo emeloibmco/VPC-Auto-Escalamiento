@@ -73,6 +73,7 @@ resource "ibm_is_instance_template" "instance_template" {
 resource "ibm_is_lb" "lb" {
   name            = "${var.vpc_name}-lb"
   subnets         = ibm_is_subnet.subnet.*.id
+  security_groups = [ibm_is_security_group.security_group.id]
   resource_group  = data.ibm_resource_group.group.id
 }
 
