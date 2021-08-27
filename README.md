@@ -97,7 +97,7 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 
 ## Prueba de esfuerzo para generar el autoescalamiento :muscle:
 
-Para realizar una prueba de esfuerzo utilice alguna de las siguientes opciones opciones:
+Para realizar una prueba de esfuerzo utilice alguna de las siguientes opciones:
 
 * [Ejecutar comando curl](#Ejecutar-comando-curl)
 * [Uso de JMeter](#Uso-de-JMeter)
