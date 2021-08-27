@@ -140,7 +140,7 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 
 8. Para finalizar de click en la pestaña ```Run``` ➡ ```Start``` y espere mientras se completan las solicitudes HTTP.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/PruebaFinalJMeter.gif"></p>
+<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/PruebaFinalJMeter.gif"></p>
 <br />
 
 ## Programar el autoescalamiento :alarm_clock:
