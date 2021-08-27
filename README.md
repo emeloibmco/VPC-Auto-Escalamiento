@@ -33,6 +33,7 @@ Dichos recursos serán aprovisionados por medio de *IBM® Cloud Schematics*, una
 * Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud</a>.
 * Contar con un grupo de recursos específico para el despliegue de los recursos
 * Contar con una llave ssh configurada en IBM Cloud - referencia [VPC SSH documentation](https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH#Configurar-claves-SSH-closed_lock_with_key)
+* Tener descargado <a href="https://jmeter.apache.org/download_jmeter.cgi">Apache JMeter</a> en caso de realizar la prueba de esfuerzo con esta herramienta. Esta aplicación se basa en Java, por lo tanto, asegúrese de tener instalado el Java Runtime en su computador para poder ejecutar el JMeter.
 <br />
 
 ## Crear y configurar un espacio de trabajo en IBM Cloud Schematics :bookmark_tabs:
@@ -137,7 +138,7 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 
 7. De click derecho sobre ```HTTP Request``` ➡ ```Add``` ➡ ```Listener``` ➡ ```View Results Tree```.
 
-8. Para finalizar de click en la pestaña ```Run``` ➡ ```Start```. Espere mientras se completan las solicitudes HTTP.
+8. Para finalizar de click en la pestaña ```Run``` ➡ ```Start``` y espere mientras se completan las solicitudes HTTP.
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/PruebaFinalJMeter.gif"></p>
 <br />
