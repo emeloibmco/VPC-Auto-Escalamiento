@@ -99,8 +99,8 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 
 Para realizar una prueba de esfuerzo lo puede realizar mediante dos opciones:
 
-a. [Ejecutar comando curl](#Ejecutar-comando-curl)
-b. [Uso de JMeter](#Uso-de-JMeter)
+* [Ejecutar comando curl](#Ejecutar-comando-curl)
+* [Uso de JMeter](#Uso-de-JMeter)
 <br />
 
 ### Ejecutar comando curl
@@ -174,9 +174,6 @@ Una vez haya ingresado todos los datos, de click en ``` Crear / Create ```.
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/vsi.PNG"></p>
 <br />
-
-
-
 
 
 ## Referencias :mag:
