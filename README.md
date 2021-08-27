@@ -99,8 +99,8 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 
 Para realizar una prueba de esfuerzo lo puede realizar mediante dos opciones:
 
-1. [Ejecutar comando curl](#Ejecutar-comando-curl)
-2. [Uso de JMeter](#Uso-de-JMeter)
+a. [Ejecutar comando curl](#Ejecutar-comando-curl)
+b. [Uso de JMeter](#Uso-de-JMeter)
 <br />
 
 ### Ejecutar comando curl
@@ -117,7 +117,28 @@ for ($i=0; $i -le 2000; $i++) {
 <br />
 
 ### Uso de JMeter
+Siga estos pasos para realizar la prueba de esfuerzo:
 
+1. Ejecute el JMeter (Se encuentra en carpeta ```bin```, con extensión ```.bat``` para Windows y/o ```.sh``` para Linux / MaC).
+
+2. Cuando cargue el programa, observará que lo primero que aparece es un ```Test Plan```. Deje en todos los campos los valores que salen por defecto.
+
+3. De click derecho sobre el ```Test Plan``` y seleccione ➡ ```Add``` ➡ ```Threads (Users)``` ➡ ```Thread Group```.
+
+4. En el ```Thread Group``` indique la cantidad de usuarios que desean realizar las solicitudes HTTP y el tiempo deseado.
+
+5. Posteriormente, de click derecho sobre ```Thread Group``` ➡ ```Add``` ➡ ```Sampler``` ➡ ```HTTP Request```.
+
+6. En el ```HTTP Request``` complete los campos:
+   * ```Protocol[http]```: para este caso de ejemplo coloque ```http```.
+   * ```Server Name or IP```: coloque la IP de balanceador de carga.
+   * ```Path```: coloque ```/```.
+
+7. De click derecho sobre ```HTTP Request``` ➡ ```Add``` ➡ ```Listener``` ➡ ```View Results Tree```.
+
+8. Para finalizar de click en la pestaña ```Run``` ➡ ```Start```. Espere mientras se completan las solicitudes HTTP.
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento/blob/main/images/PruebaFinalJMeter.gif"></p>
 <br />
 
 ## Programar el autoescalamiento :alarm_clock:
