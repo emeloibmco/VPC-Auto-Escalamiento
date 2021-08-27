@@ -97,7 +97,15 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 
 ## Prueba de esfuerzo para generar el autoescalamiento :muscle:
 
-1. Para realizar una prueba de esfuerzo, se ejecutará el comando ```curl``` 2000 veces. Para esto, acceda a *PowerShell* y ejecute el siguiente comando:
+Para realizar una prueba de esfuerzo lo puede realizar mediante dos opciones:
+
+1. [Ejecutar comando curl](#Ejecutar-comando-curl)
+2. [Uso de JMeter](#Uso-de-JMeter)
+
+
+### Ejecutar comando curl
+
+1. Se ejecutará el comando ```curl``` 2000 veces. Para esto, acceda a *PowerShell* y ejecute el siguiente comando:
 ```
 for ($i=0; $i -le 2000; $i++) {
   curl http://<IP Pública>
@@ -106,6 +114,9 @@ for ($i=0; $i -le 2000; $i++) {
 
 2. Mientras se ejecuta la prueba, dirijase a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a>, elija la instancia que se aprovisonó y de click en la pestaña de ```Memberships```, allí a medida que se ejecuta la prueba deberá observar como se genera el autoescalamiento, añadiendo más intancias automáticamente.
 <br />
+
+### Uso de JMeter
+
 
 ## Programar el autoescalamiento :alarm_clock:
 *IBM Cloud* le permite programar un autoescalamiento de sus recursos, para lograrlo siga estos pasos:
