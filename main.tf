@@ -62,6 +62,7 @@ resource "ibm_is_instance_template" "instance_template" {
 
   primary_network_interface {
     subnet          = ibm_is_subnet.subnet[0].id
+    security_groups = [ibm_is_security_group.security_group.id]
   }
 
   vpc       = ibm_is_vpc.vpc.id
