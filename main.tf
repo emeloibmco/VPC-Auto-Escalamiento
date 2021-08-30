@@ -103,6 +103,7 @@ resource "ibm_is_instance_group" "instance_group" {
   instance_template  = ibm_is_instance_template.instance_template.id
   instance_count     = 1
   subnets            = ibm_is_subnet.subnet.*.id
+  resource_group           = data.ibm_resource_group.group.id
   load_balancer      = ibm_is_lb.lb.id
   load_balancer_pool = element(split("/", ibm_is_lb_pool.lb-pool.id), 1)
   application_port   = var.enable_end_to_end_encryption ? 443 : 80
