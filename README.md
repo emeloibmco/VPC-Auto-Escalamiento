@@ -52,7 +52,7 @@ Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 * ```Descripción```: Opcionalmente puede dar una descripción del proyecto. 
 
 Una vez completos todos los campos puede presionar la opcion ```Crear / Create```.
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/schematics.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/schematics.gif"></p>
 <br />
 
 ## Configurar las variables de personalización de la plantilla de terraform :memo:
@@ -63,7 +63,7 @@ Una vez  creado el espacio de trabajo, podra ver el campo ```Variables``` que pe
 * ```basename```: Ingrese el prefijo de nombre que tendran los recursos a desplegar dentro de la VPC.
 * ```ssh_keyname```: Nombre del ssh key que tendrán las instancias de computo en el template, la cual aprovisono previamente.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/variables.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/variables.gif"></p>
 <br />
 
 ## Generar y aplicar el plan de despliegue de los servidores VPC :white_check_mark:
@@ -73,14 +73,14 @@ Ya que estan todos los campos de personalización completos, debe ir hasta la pa
 
 Asegurese de que el proceso se complete con éxito.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/generate.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/generate.gif"></p>
 <br />
 
 * ```Aplicar plan```: Cuando esté listo para realizar cambios en su entorno de nube, puede aplicar sus archivos de configuración de Terraform. Para ejecutar las acciones que se especifican en sus archivos de configuración, Schematics utiliza el complemento *IBM Cloud Provider* para Terraform.
 
 A medida que se aplique el plan, se crearán los distintos recursos, los cuales puede ir observando en la lista de recursos de su cuenta. Puede reconocerlos por el ```basename``` especificado previamente. Asegurese de que el proceso se complete con éxito.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/apply.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/apply.gif"></p>
 <br />
 
 ## Obtener IP pública del load balancer y solicitud HTTP :mag:
@@ -88,12 +88,12 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 1. Dirijase al servicio de <a href="https://cloud.ibm.com/vpc-ext/network/loadBalancers">Load Balancer</a> y de click en el Load Balancer desplegado.
 2. En ```IPs``` guarde la IP pública.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/ip.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/ip.gif"></p>
 <br />
 
 3. Coloque la ```IP pública``` en la barra de navegación y deberá visualizar lo que se muestra en la imagen.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/servidor.PNG"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/servidor.PNG"></p>
 <br />
 
 ## Prueba de esfuerzo para generar el autoescalamiento :muscle:
@@ -140,7 +140,7 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 
 8. Para finalizar de click en la pestaña ```Run``` ➡ ```Start``` y espere mientras se completan las solicitudes HTTP.
 
-<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/PruebaFinalJMeter.gif"></p>
+<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/PruebaFinalJMeter.gif"></p>
 <br />
 
 ## Programar el autoescalamiento :alarm_clock:
@@ -153,27 +153,27 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 * ```Tamaño del grupo de instancias```: Seleccione un tamaño mínimo o máximo (o ambos) para aplicar cuando se ejecute esta acción.
 
 Una vez haya ingresado todos los datos, de click en ``` Crear / Create ```.
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/programar.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/programar.gif"></p>
 <br />
 
 2. En la fecha y hora que programo, ingrese a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a> y observe el estado en ```Escalamiento / Scaling ``` y que el número de instancias haya autoescalado, como se observa en la imagen.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/scaling.PNG"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/scaling.PNG"></p>
 <br />
 
  3. Transcurrido un tiempo, ingrese a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a> y observe el estado en ```Saludable / Healthy ``` del grupo de instancias, ingrese a su grupo de instancias y dirijase a ```Memberships``` y visualice las dos instancias y su estado.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/intances.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/intances.gif"></p>
 <br />
 
 4. Dirijase al servicio de <a href="https://cloud.ibm.com/vpc-ext/network/loadBalancers">Load Balancer</a> y de click en el Load Balancer desplegado. Seleccione la pestaña ```Back-end pool``` y visualice las instancias con la subred donde esta desplegadas y su dirección IP privada.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/loadbalancer.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/loadbalancer.gif"></p>
 <br />
 
 5. Por último ingrese a <a href="https://cloud.ibm.com/vpc-ext/compute/vs">Virtual Server Instances</a> y visualice las instancias en estado ```Running```, como se observa en la imagen.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/images/vsi.PNG"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/vsi.PNG"></p>
 <br />
 
 
