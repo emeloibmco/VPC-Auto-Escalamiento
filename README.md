@@ -13,7 +13,7 @@ Siguiendo las instrucciones de esta guía se aprovisionarán los siguientes recu
 Dichos recursos serán aprovisionados por medio de *IBM® Cloud Schematics*, una vez sean implementados, se realizará una prueba de esfuerzo para observar el autoescalamiento en el grupo de instancias.
 
 <p align="center">
-<img width="500" alt="autoscale" src=images/vpc-autoscale.png>
+<img width="500" alt="autoscale" src=https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/vpc-autoscale.png>
 </p>
 
 ## Índice  📰
