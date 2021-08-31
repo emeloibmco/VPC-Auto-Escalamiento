@@ -109,6 +109,7 @@ resource "ibm_is_instance_group" "instance_group" {
   load_balancer      = ibm_is_lb.lb.id
   load_balancer_pool = element(split("/", ibm_is_lb_pool.lb-pool.id), 1)
   application_port   = var.enable_end_to_end_encryption ? 443 : 80
+  depends_on = [ibm_is_lb_listener.lb-listener, ibm_is_lb_pool.lb-pool, ibm_is_lb.lb]
 }
 
 resource "ibm_is_instance_group_manager" "instance_group_manager" {
