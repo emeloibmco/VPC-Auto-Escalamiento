@@ -49,6 +49,23 @@ Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 * ```Nombre```: Agregue un nombre para el espacio de trabajo.
 * ```Grupo de recursos```: Seleccione el grupo de recursos al que tiene acceso.
 * ```Ubicación```: Seleccione una ubicacion para el espacio de trabajo.
+<br />
+| NAME | DISPLAY NAME |
+| ------------- | :---: |
+| au-syd        | Sydney          |     
+| in-che        | Chennai         |     
+| jp-osa        | Osaka           |     
+| jp-tok        | Tokyo           |     
+| kr-seo        | Seoul           |     
+| eu-de         | Frankfurt       | 
+| eu-gb         | London          | 
+| ca-tor        | Toronto         |     
+| us-south      | Dallas          | 
+| us-south-test | Dallas Test     |
+| us-east       | Washington DC   |
+| br-sao        | Sao Paulo       |
+<br />
+
 * ```Descripción```: Opcionalmente puede dar una descripción del proyecto. 
 
 Una vez completos todos los campos puede presionar la opcion ```Crear / Create```.
