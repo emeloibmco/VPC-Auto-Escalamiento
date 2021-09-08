@@ -49,7 +49,8 @@ Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 * ```Nombre```: Agregue un nombre para el espacio de trabajo.
 * ```Grupo de recursos```: Seleccione el grupo de recursos al que tiene acceso.
 * ```Ubicación```: Seleccione una ubicacion para el espacio de trabajo.
-<br />
+
+
 | NAME | DISPLAY NAME |
 | ------------- | :---: |
 | au-syd        | Sydney          |     
@@ -64,7 +65,8 @@ Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 | us-south-test | Dallas Test     |
 | us-east       | Washington DC   |
 | br-sao        | Sao Paulo       |
-<br />
+
+
 
 * ```Descripción```: Opcionalmente puede dar una descripción del proyecto. 
 
