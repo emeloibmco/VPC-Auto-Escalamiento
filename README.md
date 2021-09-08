@@ -51,7 +51,7 @@ Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 * ```Ubicación```: Seleccione una ubicacion para el espacio de trabajo.
 
 
-| NAME | DISPLAY NAME |
+| Name | Display Name |
 | ------------- | :---: |
 | au-syd        | Sydney          |     
 | in-che        | Chennai         |     
