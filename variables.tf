@@ -18,7 +18,7 @@ variable "basename" {
 
 variable "region" {
   description = "The region in which you want to provision your VPC and its resources"
-  default     = "us-south"
+  default     = "up-osa"
 }
 
 variable "ssh_keyname" {
