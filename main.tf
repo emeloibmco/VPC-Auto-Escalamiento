@@ -126,7 +126,7 @@ resource "ibm_is_instance_group_manager_policy" "cpuPolicy" {
   instance_group         = ibm_is_instance_group.instance_group.id
   instance_group_manager = ibm_is_instance_group_manager.instance_group_manager.manager_id
   metric_type            = "cpu"
-  metric_value           = 10
+  metric_value           = 30
   policy_type            = "target"
   name                   = "${var.basename}-instance-group-manager-policy"
 }
