@@ -48,7 +48,7 @@ Dirijase al servicio de <a href="https://cloud.ibm.com/schematics/workspaces">IB
 Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 * ```Nombre```: Agregue un nombre para el espacio de trabajo.
 * ```Grupo de recursos```: Seleccione el grupo de recursos al que tiene acceso.
-* ```Ubicación```: Seleccione una ubicacion para el espacio de trabajo.
+* ```Ubicación```: Seleccione una ubicacion para el espacio de trabajo. Recuerde que la ubicación determina dónde se ejecutarán las acciones del espacio de trabajo y no donde se desplegarán los recursos.
 * ```Descripción```: Opcionalmente puede dar una descripción del proyecto. 
 
 Una vez completos todos los campos puede presionar la opcion ```Crear / Create```.
