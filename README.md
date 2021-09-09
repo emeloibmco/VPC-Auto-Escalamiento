@@ -49,6 +49,19 @@ Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 * ```Nombre```: Agregue un nombre para el espacio de trabajo.
 * ```Grupo de recursos```: Seleccione el grupo de recursos al que tiene acceso.
 * ```Ubicación```: Seleccione una ubicacion para el espacio de trabajo.
+* ```Descripción```: Opcionalmente puede dar una descripción del proyecto. 
+
+Una vez completos todos los campos puede presionar la opcion ```Crear / Create```.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/schematics.gif"></p>
+<br />
+
+## Configurar las variables de personalización de la plantilla de terraform :memo:
+Una vez  creado el espacio de trabajo, podra ver el campo ```Variables``` que permite personalizar el espacio de trabajo. Allí ingrese los siguientes campos:
+
+* ```resource_group_name```: Ingrese el nombre del grupo de recursos en el cual tiene permisos y donde quedaran agrupados todos los recursos que se aprovisionaran.
+* ```vpc_name```: Ingrese el nombre que tendra el recurso de VPC en IBM Cloud.
+* ```basename```: Ingrese el prefijo de nombre que tendran los recursos a desplegar dentro de la VPC.
+* ```region```: Ingrese el nombre de la ubicación, en caso de que requiera una diferente a la por defecto ```jp-osa```.
 
 
 | Name | Display Name |
@@ -66,21 +79,7 @@ Presione ```Siguiente / Next```. Posteriormente complete lo siguiente:
 | us-east       | Washington DC   |
 | br-sao        | Sao Paulo       |
 
-
-
-* ```Descripción```: Opcionalmente puede dar una descripción del proyecto. 
-
-Una vez completos todos los campos puede presionar la opcion ```Crear / Create```.
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/schematics.gif"></p>
-<br />
-
-## Configurar las variables de personalización de la plantilla de terraform :memo:
-Una vez  creado el espacio de trabajo, podra ver el campo ```Variables``` que permite personalizar el espacio de trabajo. Allí ingrese los siguientes campos:
-
-* ```resource_group_name```: Ingrese el nombre del grupo de recursos en el cual tiene permisos y donde quedaran agrupados todos los recursos que se aprovisionaran.
-* ```vpc_name```: Ingrese el nombre que tendra el recurso de VPC en IBM Cloud.
-* ```basename```: Ingrese el prefijo de nombre que tendran los recursos a desplegar dentro de la VPC.
-* ```ssh_keyname```: Nombre del ssh key que tendrán las instancias de computo en el template, la cual aprovisono previamente.
+* ```ssh_keyname```: Nombre del ssh key que tendrán las instancias de computo en el template, la cual aprovisono previamente. Recuerde que debe estar aprovisionada en la misma ubicación que escogio en la variable anterior.
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/variables.gif"></p>
 <br />
