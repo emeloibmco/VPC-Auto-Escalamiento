@@ -82,7 +82,7 @@ resource "ibm_is_lb" "lb" {
 resource "ibm_is_lb_listener" "lb-listener" {
   lb                   = ibm_is_lb.lb.id
   port                 = "80"
-  protocol             = "http"
+  protocol             = "tcp"
   default_pool         = element(split("/", ibm_is_lb_pool.lb-pool.id), 1)
   certificate_instance = var.certificate_crn == "" ? "" : var.certificate_crn
 }
