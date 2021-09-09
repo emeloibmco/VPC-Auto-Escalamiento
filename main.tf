@@ -82,20 +82,20 @@ resource "ibm_is_lb" "lb" {
 resource "ibm_is_lb_listener" "lb-listener" {
   lb                   = ibm_is_lb.lb.id
   port                 = "80"
-  protocol             = "tcp"
-  default_pool         = element(split("/?n=100", ibm_is_lb_pool.lb-pool.id), 1)
+  protocol             = "http"
+  default_pool         = element(split("/", ibm_is_lb_pool.lb-pool.id), 1)
   certificate_instance = var.certificate_crn == "" ? "" : var.certificate_crn
 }
 
 resource "ibm_is_lb_pool" "lb-pool" {
   lb                 = ibm_is_lb.lb.id
   name               = "${var.vpc_name}-lb-pool"
-  protocol           = var.enable_end_to_end_encryption ? "https" : "http"
+  protocol           = "tcp"
   algorithm          = "round_robin"
   health_delay       = "15"
   health_retries     = "2"
   health_timeout     = "5"
-  health_type        = var.enable_end_to_end_encryption ? "https" : "http"
+  health_type        = "tcp"
   health_monitor_url = "/"
 }
 
