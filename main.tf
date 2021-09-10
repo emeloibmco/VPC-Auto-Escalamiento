@@ -15,15 +15,6 @@ resource "ibm_is_vpc" "vpc" {
   resource_group = data.ibm_resource_group.group.id
 }
 
-resource "ibm_is_subnet" "subnet" {
-  count                    = 2
-  name                     = "${var.vpc_name}-subnet-${count.index + 1}"
-  vpc                      = ibm_is_vpc.vpc.id
-  zone                     = "${var.region}-${count.index + 1}"
-  resource_group           = data.ibm_resource_group.group.id
-  total_ipv4_address_count = "256"
-}
-
 resource "ibm_is_public_gateway" "public_gateway" {
   name = "autoscale-pub-gateway"
   vpc  = ibm_is_vpc.vpc.id
@@ -46,6 +37,24 @@ resource "ibm_is_public_gateway" "public_gateway2" {
   timeouts {
     create = "90m"
   }
+}
+
+resource "ibm_is_subnet" "subnet1" {
+  name                     = "${var.vpc_name}-subnet-1"
+  vpc                      = ibm_is_vpc.vpc.id
+  zone                     = "${var.region}-1"
+  public_gateway            = ibm_is_public_gateway.public_gateway.id
+  resource_group           = data.ibm_resource_group.group.id
+  total_ipv4_address_count = "256"
+}
+
+resource "ibm_is_subnet" "subnet2" {
+  name                     = "${var.vpc_name}-subnet-2"
+  vpc                      = ibm_is_vpc.vpc.id
+  zone                     = "${var.region}-2"
+  public_gateway            = ibm_is_public_gateway.public_gateway2.id
+  resource_group           = data.ibm_resource_group.group.id
+  total_ipv4_address_count = "256"
 }
 
 resource "ibm_is_security_group" "security_group" {
