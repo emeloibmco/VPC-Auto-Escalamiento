@@ -1,5 +1,5 @@
 data "ibm_is_image" "image" {
-  name = "ibm-ubuntu-18-04-1-minimal-amd64-2"
+  name = "ibm-ubuntu-20-04-2-minimal-amd64-1"
 }
 
 data "ibm_is_ssh_key" "sshkey" {
