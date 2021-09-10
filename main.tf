@@ -82,7 +82,7 @@ resource "ibm_is_instance_template" "instance_template" {
   resource_group = data.ibm_resource_group.group.id
 
   primary_network_interface {
-    subnet          = ibm_is_subnet.subnet1[0].id
+    subnet          = ibm_is_subnet.subnet1.id
     security_groups = [ibm_is_security_group.security_group.id]
   }
 
