@@ -36,6 +36,18 @@ resource "ibm_is_public_gateway" "public_gateway" {
   }
 }
 
+resource "ibm_is_public_gateway" "public_gateway2" {
+  name = "autoscale-pub-gateway2"
+  vpc  = ibm_is_vpc.vpc.id
+  zone = "${var.region}-2"
+  resource_group           = data.ibm_resource_group.group.id
+
+  //User can configure timeouts
+  timeouts {
+    create = "90m"
+  }
+}
+
 resource "ibm_is_security_group" "security_group" {
   name           = "${var.vpc_name}-lb-sg"
   vpc            = ibm_is_vpc.vpc.id
@@ -68,7 +80,7 @@ resource "ibm_is_instance_template" "instance_template" {
   vpc       = ibm_is_vpc.vpc.id
   zone      = "${var.region}-1"
   keys      = [data.ibm_is_ssh_key.sshkey.id]
-  user_data = file("./scripts/script-test.sh")
+  user_data = file("./scripts/script.sh")
 #  user_data = var.enable_end_to_end_encryption ? file("./scripts/install-software-ssl.sh") : file("./scripts/install-software.sh")
 }
 
