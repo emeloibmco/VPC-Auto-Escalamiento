@@ -109,7 +109,7 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/ip.gif"></p>
 <br />
 
-3. Coloque la ```IP pública``` en la barra de navegación y deberá visualizar lo que se muestra en la imagen.
+3. Coloque la siguiente URL en su navegador ```http://IP pública/?n=10000``` en la barra de navegación y deberá visualizar lo que se muestra en la imagen.
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/servidor.PNG"></p>
 <br />
