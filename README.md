@@ -101,10 +101,10 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/apply.gif"></p>
 <br />
 
-## Obtener IP pública del load balancer y solicitud HTTP :mag:
+## Obtener IP del load balancer y solicitud HTTP :mag:
 
 1. Dirijase al servicio de <a href="https://cloud.ibm.com/vpc-ext/network/loadBalancers">Load Balancer</a> y de click en el Load Balancer desplegado.
-2. En ```IPs``` guarde la IP pública.
+2. En ```IPs``` guarde cualquiera de las IP.
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/ip.gif"></p>
 <br />
