@@ -117,6 +117,7 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 ## Prueba de esfuerzo para generar el autoescalamiento :muscle:
 
 Para realizar la prueba de esfuerzo se utiliza la herramienta JMeter, a través de la cual se envian un número determinado de peticiones al servidor en un tiempo determinado, de tal manera que se logre estresar a más del 10% la CPU de la instancia aprovisionada y el grupo de instancias autoescale. 
+<br />
 
 ### Uso de JMeter
 Siga estos pasos para realizar la prueba de esfuerzo:
