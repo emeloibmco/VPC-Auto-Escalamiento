@@ -145,6 +145,7 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 7. De click derecho sobre ```HTTP Request``` ➡ ```Add``` ➡ ```Listener``` ➡ ```View Results Tree```.
 
 8. Para finalizar de click en la pestaña ```Run``` ➡ ```Start``` y espere mientras se completan las solicitudes HTTP.
+<br />
 
 <p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/FinalJMeterAutoescalamiento.gif"></p>
 <br />
