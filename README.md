@@ -150,12 +150,12 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 <p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/monitoring.gif"></p>
 <br />
 2. Tambien podrá observar como los grupos de instancias autoescalan mientra se ejecuta las solicitudes en Jmeter.
-<br />
+
 <p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/ae1.gif"></p>
 <br />
 
 3. Finalmente cuando se terminen de enviar las solicitudes, podrá visualizar el desescalamiento de las instancias.
-<br />
+
 <p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/ae2.gif"></p>
 <br />
 
