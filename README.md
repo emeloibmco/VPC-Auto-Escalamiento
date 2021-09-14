@@ -125,7 +125,7 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 
 1. Ejecute el JMeter (Se encuentra en carpeta ```bin```, con extensión ```.bat``` para Windows y/o ```.sh``` para Linux / MaC).
 
-<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/JMeter.PNG"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/JMeter.PNG"></p>
 <br />
 
 2. Cuando cargue el programa, observará que lo primero que aparece es un ```Test Plan```. Deje en todos los campos los valores que salen por defecto.
