@@ -127,21 +127,25 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 
 3. De click derecho sobre el ```Test Plan``` y seleccione ➡ ```Add``` ➡ ```Threads (Users)``` ➡ ```Thread Group```.
 
-4. En el ```Thread Group``` indique la cantidad de usuarios que desean realizar las solicitudes HTTP y el tiempo deseado.
+4. En el ```Thread Group``` indique la cantidad de usuarios que desean realizar las solicitudes HTTP y el tiempo deseado. Por ejemplo utilice: ```Users: 5000``` y ```Seconds: 360```.
 
 5. Posteriormente, de click derecho sobre ```Thread Group``` ➡ ```Add``` ➡ ```Sampler``` ➡ ```HTTP Request```.
 
 6. En el ```HTTP Request``` complete los campos:
    * ```Protocol[http]```: para este caso de ejemplo coloque ```http```.
-   * ```Server Name or IP```: coloque la IP de Load Balancer.
-   * ```Port Number```: indique el puerto en caso de ser necesario.
-   * ```Path```: coloque ```/```.
+   * ```Server Name or IP```: coloque la IP de Load Balancer. Por ejemplo: ```163.68.92.105/?n=20000```.
+   * ```Port Number```: indique el puerto en caso de ser necesario. 
+   * ```Path```: coloque la ruta en caso de ser necesaria. Por ejemplo: ```/?n=20000```
 
 7. De click derecho sobre ```HTTP Request``` ➡ ```Add``` ➡ ```Listener``` ➡ ```View Results Tree```.
 
 8. Para finalizar de click en la pestaña ```Run``` ➡ ```Start``` y espere mientras se completan las solicitudes HTTP.
 
 <p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/PruebaFinalJMeter.gif"></p>
+<br />
+
+
+<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/Prueba%20JMeter%20para%20Autoescalamiento.gif"></p>
 <br />
 
 ### Visualización del autoescalamiento en la consola 
