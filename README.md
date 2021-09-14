@@ -109,31 +109,14 @@ A medida que se aplique el plan, se crearán los distintos recursos, los cuales 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/ip.gif"></p>
 <br />
 
-3. Coloque la siguiente URL en su navegador ```http://IP pública/?n=10000``` en la barra de navegación y deberá visualizar lo que se muestra en la imagen.
+3. Coloque la siguiente URL en la barra de navegación ```http://IP pública/?n=X```, ```X``` es el número hasta donde la aplicación calculará el número de primos, asi que si X= 20000 deberá visualizar lo que se muestra en la imagen.
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/servidor.PNG"></p>
 <br />
 
 ## Prueba de esfuerzo para generar el autoescalamiento :muscle:
 
-Para realizar una prueba de esfuerzo utilice alguna de las siguientes opciones:
-
-* [Ejecutar comando curl](#Ejecutar-comando-curl)
-* [Uso de JMeter](#Uso-de-JMeter)
-<br />
-
-### Ejecutar comando curl
-
-1. Se ejecutará el comando ```curl``` 2000 veces. Para esto, acceda a *PowerShell* y ejecute el siguiente comando:
-```
-for ($i=0; $i -le 2000; $i++) {
-  curl http://<IP Pública>
- }
-```
-
-2. Mientras se ejecuta la prueba, dirijase a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a>, elija la instancia que se aprovisonó y de click en la pestaña de ```Memberships```, allí a medida que se ejecuta la prueba deberá observar como se genera el autoescalamiento, añadiendo más intancias automáticamente.
-
-<br />
+Para realizar la prueba de esfuerzo se utiliza la herramienta JMeter, a través de la cual se envian un número determinado de peticiones al servidor en un tiempo determinado, de tal manera que se logre estresar a más del 10% la CPU de la instancia aprovisionada y el grupo de instancias autoescale. 
 
 ### Uso de JMeter
 Siga estos pasos para realizar la prueba de esfuerzo:
@@ -160,6 +143,22 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 
 <p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/PruebaFinalJMeter.gif"></p>
 <br />
+
+### Visualización del autoescalamiento en la consola 
+1. Dirijase a <a href="https://cloud.ibm.com/vpc-ext/autoscale/groups">Grupos de Instancia / Instance Groups</a>, ingrese al grupo de intancias desplegado y de click en la pestaña ```Memberships```. Cuando Jmeter se este ejecutando, puede ingresar a la instancia, posteriormente dar clik en la pestaña ```Monitoring```, allí encuentra el resumen del consumo de CPU y puede evidenciar que actualmente se esta esforzando a más del 10%.
+
+<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/monitoring.gif"></p>
+<br />
+2. Tambien podrá observar como los grupos de instancias autoescalan mientra se ejecuta las solicitudes en Jmeter.
+
+<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/ae1.gif"></p>
+<br />
+
+3. Finalmente cuando se terminen de enviar las solicitudes, podrá visualizar el desescalamiento de las instancias.
+
+<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/ae2.gif"></p>
+<br />
+
 
 ## Programar el autoescalamiento :alarm_clock:
 *IBM Cloud* le permite programar un autoescalamiento de sus recursos, para lograrlo siga estos pasos:
