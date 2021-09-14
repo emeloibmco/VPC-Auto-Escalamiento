@@ -141,11 +141,7 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 
 8. Para finalizar de click en la pestaña ```Run``` ➡ ```Start``` y espere mientras se completan las solicitudes HTTP.
 
-<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/PruebaFinalJMeter.gif"></p>
-<br />
-
-
-<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/Prueba%20JMeter%20para%20Autoescalamiento.gif"></p>
+<p align="center"><img width="900" src="https://github.com/emeloibmco/VPC-Auto-Escalamiento-IMG/blob/main/Imagenes/FinalJMeterAutoescalamiento.gif"></p>
 <br />
 
 ### Visualización del autoescalamiento en la consola 
