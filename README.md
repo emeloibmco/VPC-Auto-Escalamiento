@@ -132,7 +132,7 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 
 3. De click derecho sobre el ```Test Plan``` y seleccione ➡ ```Add``` ➡ ```Threads (Users)``` ➡ ```Thread Group```.
 
-4. En el ```Thread Group``` indique la cantidad de usuarios que desean realizar las solicitudes HTTP y el tiempo deseado. Por ejemplo utilice: ```Users: 5000``` y ```Seconds: 360```.
+4. En el ```Thread Group``` indique la cantidad de usuarios que desean realizar las solicitudes HTTP y el tiempo deseado. Por ejemplo: ```Users: 5000``` y ```Seconds: 360```.
 
 5. Posteriormente, de click derecho sobre ```Thread Group``` ➡ ```Add``` ➡ ```Sampler``` ➡ ```HTTP Request```.
 
