@@ -133,7 +133,7 @@ Siga estos pasos para realizar la prueba de esfuerzo:
 
 6. En el ```HTTP Request``` complete los campos:
    * ```Protocol[http]```: para este caso de ejemplo coloque ```http```.
-   * ```Server Name or IP```: coloque la IP de Load Balancer. Por ejemplo: ```163.68.92.105/?n=20000```.
+   * ```Server Name or IP```: coloque la IP de Load Balancer. Por ejemplo: ```163.68.92.105```.
    * ```Port Number```: indique el puerto en caso de ser necesario. 
    * ```Path```: coloque la ruta en caso de ser necesaria. Por ejemplo: ```/?n=20000```
 
