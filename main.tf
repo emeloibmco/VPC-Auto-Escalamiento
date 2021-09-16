@@ -10,6 +10,11 @@ data "ibm_resource_group" "group" {
   name = var.resource_group_name
 }
 
+provider "ibm" {
+  alias  = "primary"
+  region = var.region
+}
+
 resource "ibm_is_vpc" "vpc" {
   name           = var.vpc_name
   resource_group = data.ibm_resource_group.group.id
@@ -122,6 +127,7 @@ resource "ibm_is_lb_pool" "lb-pool" {
 
 
 resource "ibm_is_instance_group" "instance_group" {
+  provider      = ibm.primary
   name               = "${var.basename}-instance-group"
   instance_template  = ibm_is_instance_template.instance_template.id
   instance_count     = 1
