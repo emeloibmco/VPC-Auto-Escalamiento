@@ -27,32 +27,11 @@ resource "ibm_is_public_gateway" "public_gateway" {
   }
 }
 
-resource "ibm_is_public_gateway" "public_gateway2" {
-  name = "autoscale-pub-gateway2"
-  vpc  = ibm_is_vpc.vpc.id
-  zone = "${var.region}-2"
-  resource_group           = data.ibm_resource_group.group.id
-
-  //User can configure timeouts
-  timeouts {
-    create = "90m"
-  }
-}
-
 resource "ibm_is_subnet" "subnet1" {
   name                     = "${var.vpc_name}-subnet-1"
   vpc                      = ibm_is_vpc.vpc.id
   zone                     = "${var.region}-1"
   public_gateway            = ibm_is_public_gateway.public_gateway.id
-  resource_group           = data.ibm_resource_group.group.id
-  total_ipv4_address_count = "256"
-}
-
-resource "ibm_is_subnet" "subnet2" {
-  name                     = "${var.vpc_name}-subnet-2"
-  vpc                      = ibm_is_vpc.vpc.id
-  zone                     = "${var.region}-2"
-  public_gateway            = ibm_is_public_gateway.public_gateway2.id
   resource_group           = data.ibm_resource_group.group.id
   total_ipv4_address_count = "256"
 }
@@ -95,7 +74,7 @@ resource "ibm_is_instance_template" "instance_template" {
 
 resource "ibm_is_lb" "lb" {
   name            = "${var.vpc_name}-lb"
-  subnets         = [ibm_is_subnet.subnet1.id, ibm_is_subnet.subnet2.id]
+  subnets         = [ibm_is_subnet.subnet1.id]
   security_groups = [ibm_is_security_group.security_group.id]
   resource_group  = data.ibm_resource_group.group.id
 }
@@ -125,7 +104,7 @@ resource "ibm_is_instance_group" "instance_group" {
   name               = "${var.basename}-instance-group"
   instance_template  = ibm_is_instance_template.instance_template.id
   instance_count     = 1
-  subnets            = [ibm_is_subnet.subnet1.id, ibm_is_subnet.subnet2.id]
+  subnets            = [ibm_is_subnet.subnet1.id]
   resource_group           = data.ibm_resource_group.group.id
   load_balancer      = ibm_is_lb.lb.id
   load_balancer_pool = element(split("/", ibm_is_lb_pool.lb-pool.id), 1)
